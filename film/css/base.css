@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5%; /*10px e karşılık*/
+}
+
+body {
+    font-size:1.4rem; /*mobil görüntüde 12px*/
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.row{
+    margin-bottom: 40px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col-4{
+    float:left;
+    width: 25%;
+}
+
+.col-3{
+    /*display:inline-block; her eleman alt alta değil yan yana- YERİNE FLOAT EKLEDİM*/
+    float:left;
+    width: 33.3%;
+}
+
+.col-2{
+    float:left;
+    width:50%;
+    /*height:350px; resmin çerçevesini 350px yapmak için*/
+    /*display:inline-block;
+    width: calc(50% - 2px); div elemanları arasına 1px tarayıcı ekledi (50 50 yaptığımda alta kaydı.
+    background-color:#FAE5E1 ;
+    vertical-align: top; /*dikeyde hizalama*/
+}
+
+@media (max-width:768px){
+    [class*="col"]{ /*başlangıcı col olan*/
+        width:100%; /*kolonların alt alta gelmesi*/
+    }
+}
+
+.clearfix::after{
+    /*sonradan gelecek elemanların düzgün gelmesi için*/
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.container{
+    width:100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.img-fluid{
+    width:100%; /*responsive img için*/
+}
+
+@media (min-width: 576px) { 
+    html{
+        font-size:68%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    html{
+        font-size:72%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px) { 
+    html{
+        font-size:74%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 960px;
+    }
+ }
+
+@media (min-width: 1200px) { 
+    html{
+        font-size:78%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 1140px;
+    }
+ }
+
+@media (min-width: 1400px) { 
+    html{
+        font-size:80%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 1320px;
+    }
+ }

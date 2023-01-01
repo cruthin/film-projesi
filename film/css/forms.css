@@ -1,0 +1,80 @@
+
+body{
+    background-color: #e6e6e6;
+}
+.signup-page{
+    padding-top:60px;
+    padding-bottom:60px;
+}
+
+.signup-title{
+    text-align:center;
+    font-size:30px;
+    color:#663438;
+
+}
+
+.signup-form{
+    width:100%;
+}
+
+@media (min-width:768px){
+    .signup-form{
+        width:500px;
+        margin:auto;
+    }
+}
+
+.signup-form label,
+.signup-form input:not([type="checkbox"]),
+.signup-form select{
+    display:block; /*elemanların satırı kaplaması için*/
+    width: 100%; /*sabit bir değer verilmediği için küçültünce scrollbar çıkmadı*/
+    margin-top:15px;
+    
+}
+
+.signup-form input[type="checkbox"],
+.signup-form input[type="checkbox"] + label{ /*checkbox tan sonra gelen eleman*/
+    display:inline-block;
+    width:auto;
+    margin-top:15px;
+} 
+
+.signup-form button[type="submit"] {
+    display:block; /*button u alta almak için*/
+    margin-top:15px;
+}
+
+.signup-form input:not([type="checkbox"]),
+.signup-form select{
+    border:1px solid #bfbfbf;
+    padding:8px 15px;
+    border-radius: 3px;
+}
+
+.signup-form input:not([type="checkbox"]):focus, /*inputa tıkladığında focus*/
+.signup-form select:focus
+{ 
+    outline:none;
+    background-color: #FAE5E1;
+    color:#1C1C1C;
+    border:1px solid #663438;
+}
+
+.signup-form input[type="checkbox"]{
+    appearance: none;
+    width:20px;
+    height:20px;
+    border: 1px solid #663438;
+    vertical-align: bottom;
+    border-radius: 50%;
+}
+
+.signup-form input[type="checkbox"]:hover{
+    background-color: grey;
+}
+
+.signup-form input[type="checkbox"]:checked{
+    background-color: #663438;
+}
